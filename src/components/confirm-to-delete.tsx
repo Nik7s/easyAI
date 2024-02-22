@@ -1,6 +1,13 @@
 import { Button } from "./ui/button";
 import { Note } from "@prisma/client";
-import { Dialog, DialogContent, DialogFooter, DialogHeader } from "./ui/dialog";
+import {
+  Dialog,
+  DialogClose,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+} from "./ui/dialog";
 import { DialogProps, DialogTitle } from "@radix-ui/react-dialog";
 
 type confirmDialogProps = {
@@ -14,11 +21,17 @@ export default function ConfirmDialog({
 }: confirmDialogProps) {
   return (
     <Dialog open={open} onOpenChange={setOpen}>
-      <DialogContent>
+      <DialogContent
+        onInteractOutside={(e) => {
+          e.preventDefault();
+        }}
+      >
         <DialogHeader>
-          <DialogTitle>🥹❌Confirm</DialogTitle>
+          <DialogTitle>❌Delete note</DialogTitle>
+          <DialogDescription>confirm to delete a note</DialogDescription>
         </DialogHeader>
         {children}
+        <DialogClose />
       </DialogContent>
     </Dialog>
   );

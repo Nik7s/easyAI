@@ -7,6 +7,7 @@ import { UserButton } from "@clerk/nextjs";
 import { PlusCircledIcon } from "@radix-ui/react-icons";
 import { useState } from "react";
 import AddNoteDialog from "@/components/addNoteDialog";
+import { ModeToggle } from "@/components/theme-Mode";
 
 export default function NavBarPage() {
   const [showDialog, setShowDialog] = useState(false);
@@ -32,6 +33,7 @@ export default function NavBarPage() {
                 elements: { avatarBox: { with: "", height: "" } },
               }}
             />
+            <ModeToggle />
           </div>
         </div>
       </div>

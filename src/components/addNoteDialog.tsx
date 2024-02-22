@@ -169,7 +169,10 @@ export default function AddNoteDialog({
         </DialogContent>
       </Dialog>
       <ConfirmDialog open={showConfirmDialog} setOpen={setShowConfirmDialog}>
-        <DialogDescription>Note title: {noteToedit?.title}</DialogDescription>
+        <DialogDescription>
+          <span>Note: </span>{" "}
+          <span className="text-orange-500">{noteToedit?.title}</span>
+        </DialogDescription>
         <LoadingButton
           variant={"destructive"}
           loading={deleteProgress}
