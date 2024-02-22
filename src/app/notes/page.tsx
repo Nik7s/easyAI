@@ -2,7 +2,7 @@ import { auth } from "@clerk/nextjs";
 import { Metadata } from "next";
 import prisma from "@/lib/db/prisma";
 import NodeList from "@/components/note-list";
-import { ArrowUpRight, BookPlus, Rabbit } from "lucide-react";
+import { ArrowUpRight, Rabbit } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "easyAI-nodes",

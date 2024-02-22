@@ -5,3 +5,13 @@ export const createNoteSchema = z.object({
 });
 
 export type CreateNoteSchema = z.infer<typeof createNoteSchema>;
+
+//validation for update
+export const updateNoteSchema = createNoteSchema.extend({
+  id: z.string().min(1),
+});
+
+//validation for delete
+export const deleteNoteSchema = z.object({
+  id: z.string().min(1),
+});
