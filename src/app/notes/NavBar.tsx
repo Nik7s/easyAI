@@ -8,9 +8,14 @@ import { PlusCircledIcon } from "@radix-ui/react-icons";
 import { useState } from "react";
 import AddNoteDialog from "@/components/addNoteDialog";
 import { ModeToggle } from "@/components/theme-Mode";
+import { dark } from "@clerk/themes";
+import { useTheme } from "next-themes";
+import AIChatBoxButton from "@/components/ui/AIChatButton";
 
 export default function NavBarPage() {
   const [showDialog, setShowDialog] = useState(false);
+
+  const { theme } = useTheme();
   return (
     <>
       <div className=" p-4 shadow">
@@ -27,9 +32,11 @@ export default function NavBarPage() {
               <PlusCircledIcon className="mr-2" />
               Add note
             </Button>
+            <AIChatBoxButton />
             <UserButton
               afterSignOutUrl="/"
               appearance={{
+                baseTheme: theme === "dark" ? dark : undefined,
                 elements: { avatarBox: { with: "", height: "" } },
               }}
             />
