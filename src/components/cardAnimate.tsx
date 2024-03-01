@@ -16,7 +16,7 @@ export default function CardComponent() {
   const [index, setIndex] = useState(0);
   const typingSpeed = 50;
   const sentence =
-    "Take note-taking to the next level with AI-powered insights and interactions.";
+    "Take note-taking to the next level with AI-powered insights and interactions. Lorem ipsum dolor sit, amet consectetur adipisicing elit. In veritatis quo accusantium voluptatibus inventore facilis tenetur, eaque placeat sunt aliquid suscipit obcaecati debitis, tempora minus. Labore nemo aliquid quae saepe! ";
 
   useEffect(() => {
     const typing = setInterval(() => {
@@ -33,9 +33,9 @@ export default function CardComponent() {
 
   return (
     <div className=" w-70">
-      <Card className="">
+      <Card className=" sm:max-w-[500px]">
         <CardHeader>
-          <CardTitle>
+          <CardTitle className="flex items-center gap-3">
             <Avatar>
               <AvatarImage
                 src="https://avatars.githubusercontent.com/u/123258064?v=4"
@@ -43,6 +43,7 @@ export default function CardComponent() {
               />
               <AvatarFallback>H</AvatarFallback>
             </Avatar>
+            <h2 className="mt-2">Henry Dioniz</h2>
           </CardTitle>
           <CardDescription>👋 hello!</CardDescription>
         </CardHeader>

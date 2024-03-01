@@ -10,8 +10,6 @@ import AddNoteDialog from "@/components/addNoteDialog";
 import { ModeToggle } from "@/components/theme-Mode";
 import { dark } from "@clerk/themes";
 import { useTheme } from "next-themes";
-import AIChatBoxButton from "@/components/ui/AIChatButton";
-import { Bot } from "lucide-react";
 
 export default function NavBarPage() {
   const [showDialog, setShowDialog] = useState(false);
@@ -29,16 +27,12 @@ export default function NavBarPage() {
             <span>easyAI</span>
           </Link>
           <div className="flex items-center justify-between gap-3">
-            <Button onClick={() => setShowDialog(true)}>
+            <Button onClick={() => setShowDialog(true)} variant={"secondary"}>
               <PlusCircledIcon className="mr-2" />
-              Add note
+              Teach
             </Button>
-            {/* <AIChatBoxButton /> */}
-            <Button variant={"outline"} asChild>
-              <Link href={"/AI"}>
-                <Bot />
-                Chat
-              </Link>
+            <Button asChild variant={"outline"}>
+              <Link href={"/notes"}>Vist</Link>
             </Button>
             <UserButton
               afterSignOutUrl="/"

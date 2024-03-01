@@ -7,10 +7,11 @@ import Link from "next/link";
 import { ModeToggle } from "@/components/theme-Mode";
 import { auth } from "@clerk/nextjs";
 import { redirect } from "next/navigation";
+import Features from "@/components/features";
 
 export default function Home() {
   const { userId } = auth();
-  if (userId) redirect("/notes");
+  if (userId) redirect("/AI");
 
   return (
     <>
@@ -38,6 +39,11 @@ export default function Home() {
           <Link href={"/notes"}>Start now</Link>
         </Button>
       </main>
+      <div className=" flex items-center justify-center">
+        <div className="mt-1 sm:w-[900px]">
+          <Features />
+        </div>
+      </div>
     </>
   );
 }

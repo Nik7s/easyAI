@@ -2,12 +2,23 @@
 import { cn } from "@/lib/utils";
 import AIChatBox from "@/components/AIChatBox";
 import { useState } from "react";
+import NavBarPage from "./NavBar";
 
 export default function AIpage() {
   const [showAIChatBox, setShowAIChatBox] = useState(true);
   return (
-    <div className={cn("flex h-screen w-screen items-center justify-center")}>
-      <AIChatBox open={showAIChatBox} onClose={() => setShowAIChatBox(true)} />
+    <div className="flex h-[600px] flex-col gap-6 overflow-hidden">
+      <NavBarPage />
+      <div
+        className={cn(
+          "mb-4 flex h-screen w-screen items-center justify-center",
+        )}
+      >
+        <AIChatBox
+          open={showAIChatBox}
+          onClose={() => setShowAIChatBox(true)}
+        />
+      </div>
     </div>
   );
 }

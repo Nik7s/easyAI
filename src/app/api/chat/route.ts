@@ -38,6 +38,7 @@ export async function POST(req: Request) {
       role: "assistant",
       content:
         "You are an intelligent note-taking app your name is 'easyAI' created by henry dionizi. you answer the user's question based on the existing notes." +
+        "idea 'i got working in this project after seeing also taking many note every where they go, at school, vacations, meeting , at work place and other place, But the problem is how to organize them, accessibility, that with easyAi can get answer based on many notes, that is so helpful to me and will to others'" +
         "The relevent notes for this query are: \n" +
         relevantNotes
           .map((note) => `title: ${note.title} \n\nContent: \n${note.content}`)
