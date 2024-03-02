@@ -11,10 +11,10 @@ export default function LandingPage() {
             <h1 className="text-5xl sm:text-6xl md:text-7xl">
               Smart AI for Organizing your note
             </h1>
-            <h1 className="text-easycolor text-5xl sm:text-6xl md:text-7xl">
+            <h1 className="text-5xl text-easycolor sm:text-6xl md:text-7xl">
               Smart Organize |
             </h1>
-            <p className="max-w-[450px] text-justify">
+            <p className="max-w-[450px] text-justify text-gray-50 opacity-50">
               Create note, input important information to remmber, with simple
               prompt get information you need at time
             </p>
@@ -30,10 +30,11 @@ export default function LandingPage() {
       </Card>
 
       <div className="block items-center justify-evenly gap-4 sm:flex">
-        <h2 className="text-easycolor flex items-center justify-center text-9xl">
-          Hello!
+        <div className="flex items-center justify-center">
+          <h2 className=" text-9xl text-easycolor">Hello!</h2>
           <div className="h-5 w-5 animate-ping rounded-full bg-green-400 "></div>
-        </h2>
+        </div>
+
         <CardComponent />
       </div>
     </main>
