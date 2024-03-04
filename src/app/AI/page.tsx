@@ -7,7 +7,7 @@ import NavBarPage from "./NavBar";
 export default function AIpage() {
   const [showAIChatBox, setShowAIChatBox] = useState(true);
   return (
-    <div className="flex h-[600px] flex-col gap-6 overflow-hidden">
+    <div className="flex h-screen flex-col gap-6 ">
       <NavBarPage />
       <div
         className={cn(

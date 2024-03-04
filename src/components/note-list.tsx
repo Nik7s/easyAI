@@ -27,7 +27,7 @@ export default function NoteList({ note }: NotesProps) {
     <>
       <Card
         onClick={() => setShowEditDialog(true)}
-        className="cursor-pointer transition-shadow hover:shadow-lg"
+        className="max-h-[200px] cursor-pointer overflow-scroll transition-shadow hover:shadow-lg"
       >
         <CardHeader>
           <CardTitle>{note.title}</CardTitle>

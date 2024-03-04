@@ -5,6 +5,7 @@ import {
   ArrowUpRight,
   Bot,
   Rabbit,
+  Send,
   Trash,
   User2,
   XCircle,
@@ -50,11 +51,16 @@ export default function AIChatBox({ open, onClose }: AIChatBoxProps) {
   const lastMessageIsuser = messages[messages.length - 1]?.role === "user";
 
   return (
-    <div className={cn("w-full max-w-[500px] p-1 ", open ? "fixed" : "hidden")}>
+    <div
+      className={cn(
+        " h-screen  w-screen justify-center p-5 pt-10 md:p-10 ",
+        open ? "fixed" : "hidden",
+      )}
+    >
       {/* <button onClick={onClose} title="closeBox" className="mb-1 ms-auto block">
         <XCircle size={30} />
       </button> */}
-      <div className="flex h-[500px] flex-col rounded border bg-background shadow-xl ">
+      <div className="flex h-[550px] flex-col rounded bg-background px-5 sm:px-20 ">
         <div className="h-full overflow-scroll" ref={scrollRef}>
           {messages.map((message) => (
             <ChatMessage message={message} key={message.id} />
@@ -77,23 +83,28 @@ export default function AIChatBox({ open, onClose }: AIChatBoxProps) {
           />
         )}
         {messages.length === 0 && (
-          <div className="col-span-full flex h-screen flex-col items-center justify-center gap-6">
-            <Image
+          <div className="col-span-full flex h-screen flex-col items-center justify-center gap-6 ">
+            {/* <Image
               src={Logo}
               alt="easyAi"
               className="mr-2 h-20 w-20 rounded-full object-cover opacity-40"
-            />
-            <Rabbit size={200} strokeWidth={0.5} />
+            /> */}
+            <Rabbit size={200} strokeWidth={0.5} className="my-16" />
             <div className="flex gap-3">
-              {"You don't have any chat yet. Try to chat with easyAI "}
-              <ArrowDownRight color="orange" />
+              <p className="text-center opacity-60">
+                {"You don't have any chat yet. Try to chat with easyAI "}
+              </p>
+              <ArrowDownRight color="orange hidden sm:block" />
             </div>
           </div>
         )}
 
-        <form onSubmit={handleSubmit} className=" m-3 flex gap-2">
+        <form
+          onSubmit={handleSubmit}
+          className=" m-3 flex flex-col gap-2 sm:flex-row"
+        >
           <Button
-            className="shrink-0"
+            className=" hidden shrink-0 items-center justify-center sm:flex"
             title="clear chat"
             type="button"
             variant={"secondary"}
@@ -103,13 +114,16 @@ export default function AIChatBox({ open, onClose }: AIChatBoxProps) {
             <Trash />
           </Button>
           <Input
-            placeholder="say something..."
+            placeholder="Prompt here!..."
             onChange={handleInputChange}
             value={input}
             ref={inputRef}
+            className=""
           />
 
-          <Button type="submit">Send</Button>
+          <Button type="submit" className="flex items-center justify-center">
+            <Send />
+          </Button>
         </form>
       </div>
     </div>

@@ -12,7 +12,7 @@ import { DialogContent } from "@radix-ui/react-dialog";
 export default function NavBarPage() {
   return (
     <>
-      <div className=" sticky top-0 p-4 shadow">
+      <div className=" sticky top-0 z-10 p-4 shadow">
         <div className="m-auto flex flex-wrap items-center justify-between gap-3">
           <Link
             href={"/notes"}
@@ -25,22 +25,22 @@ export default function NavBarPage() {
           {/* menuItems */}
           <NavigationMenu className="flex gap-5">
             <NavComponent />
+          </NavigationMenu>
 
-            <div className="flex items-center justify-between gap-3">
-              <Button asChild variant={"secondary"}>
-                <Link href={"https://www.buymeacoffee.com/henrylee"}>
-                  Support
-                  <ArrowUpRight />
-                </Link>
+          <div className="flex items-center justify-between gap-3">
+            <Button asChild variant={"secondary"}>
+              <Link href={"https://www.buymeacoffee.com/henrylee"}>
+                Support
+                <ArrowUpRight />
+              </Link>
+            </Button>
+            <div className="hidden sm:block">
+              <Button variant={"outline"} asChild>
+                <Link href={"/notes"}>Get started</Link>
               </Button>
-              <div className="hidden sm:block">
-                <Button variant={"outline"} asChild>
-                  <Link href={"/notes"}>Get started</Link>
-                </Button>
-              </div>
-
-              <ModeToggle />
             </div>
+
+            <ModeToggle />
 
             {/* Small screen */}
 
@@ -56,7 +56,7 @@ export default function NavBarPage() {
                 <NavComponentSmall />
               </DialogContent>
             </Dialog>
-          </NavigationMenu>
+          </div>
         </div>
       </div>
     </>

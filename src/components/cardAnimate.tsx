@@ -43,7 +43,7 @@ export default function CardComponent() {
               />
               <AvatarFallback>H</AvatarFallback>
             </Avatar>
-            <h2 className="mt-2">Henry Dioniz</h2>
+            <span className="mt-2">Henry Dioniz</span>
           </CardTitle>
           <CardDescription>👋 hello!</CardDescription>
         </CardHeader>

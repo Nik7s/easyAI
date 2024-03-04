@@ -29,7 +29,7 @@ export default function NavBarPage() {
           <div className="flex items-center justify-between gap-3">
             <Button onClick={() => setShowDialog(true)} variant={"secondary"}>
               <PlusCircledIcon className="mr-2" />
-              Teach
+              node
             </Button>
             <Button asChild variant={"outline"}>
               <Link href={"/notes"}>Vist</Link>

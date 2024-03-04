@@ -1,49 +1,96 @@
 import Logo from "@/app/assets/logo.png";
-import Curvedarrow from "@/app/assets/curveArrow.png";
-import Image from "next/image";
-import { Button } from "@/components/ui/button";
-import CardComponent from "@/components/cardAnimate";
-import Link from "next/link";
-import { ModeToggle } from "@/components/theme-Mode";
+import openAIlogo1 from "@/app/assets/openai.png";
+import openAIlogo2 from "@/app/assets/openai2.png";
 import { auth } from "@clerk/nextjs";
 import { redirect } from "next/navigation";
-import Features from "@/components/features";
+import CardComponent from "@/components/cardAnimate";
+import { Button } from "@/components/ui/button";
+import { Card, CardDescription, CardHeader } from "@/components/ui/card";
+import Curvedarrow from "@/app/assets/curveArrow.png";
+import Link from "next/link";
+import Image from "next/image";
+import { Bot } from "lucide-react";
+import MyComponent from "@/components/typeWrite";
+import NavBarPage from "./landing/NavBar";
 
-export default function Home() {
+export const metadata = {
+  title: "easyAI",
+};
+
+export default function LandingPage() {
   const { userId } = auth();
   if (userId) redirect("/AI");
-
   return (
     <>
-      <nav className="flex items-center justify-between p-3 shadow dark:bg-slate-900">
-        <h1 className="font-bold text-orange-500">eayOne!</h1>
+      <NavBarPage />
+      <main className="min-w-screen m-auto flex min-h-screen max-w-7xl flex-col items-center justify-center p-4">
+        <Card className="-mt-8 mb-9 border-none p-10 shadow-none">
+          <CardHeader>
+            <div className="mt-5 flex flex-col items-center justify-center gap-3">
+              <div className="flex flex-col items-center justify-center gap-8 text-center">
+                <Bot />
+                <h1 className="text-5xl sm:text-6xl md:text-6xl">
+                  AI for Organizing your note
+                </h1>
+                {/* <h2 className="text-5xl text-easycolor sm:text-6xl md:text-7xl ">
+                Easy Organize <span className="cursor-blink">|</span>
+              </h2> */}
 
-        <div className="flex items-center justify-center gap-10">
-          <div className="flex items-center gap-3">
-            <Link href={"/"}>Feature</Link>
-            <Link href={"/"}>Help?</Link>
+                <MyComponent />
+
+                <CardDescription className="max-w-[450px] text-center">
+                  Create note, input important information to remmber, with
+                  simple prompt get information you need at time
+                </CardDescription>
+              </div>
+
+              <div className="m-10 flex flex-col items-center justify-center gap-2">
+                <Image
+                  src={Curvedarrow}
+                  alt="curved arrow"
+                  width={50}
+                  height={100}
+                  className=" animate-bounce"
+                />
+                <Button className=" asChild">
+                  <Link href={"/notes"}>Start now</Link>
+                </Button>
+                <p className="text-center font-mono text-easycolor opacity-60 ">
+                  Stay smarter!
+                </p>
+              </div>
+            </div>
+          </CardHeader>
+        </Card>
+
+        <div className="block items-center justify-evenly gap-4 sm:flex">
+          <div className="flex items-center justify-center">
+            <h2 className=" text-9xl text-easycolor">Hello!</h2>
+            <div className="h-5 w-5 animate-ping rounded-full bg-green-400 "></div>
           </div>
 
-          <ModeToggle />
+          <CardComponent />
         </div>
-      </nav>
-      <main className="flex h-screen flex-col  items-center justify-center gap-4 dark:bg-slate-950">
-        <div className="flex items-center justify-center">
-          <Image src={Logo} alt="EasyAI logo here!" width={100} height={100} />
-          <span className="font-bold text-orange-500">easy note AI</span>
-        </div>
-        <CardComponent />
 
-        <Image src={Curvedarrow} alt="curved arrow" width={50} height={100} />
-        <Button asChild>
-          <Link href={"/notes"}>Start now</Link>
-        </Button>
-      </main>
-      <div className=" flex items-center justify-center">
-        <div className="mt-1 sm:w-[900px]">
-          <Features />
+        <br />
+        <div className="mt-5 flex gap-3">
+          <div className="mt-10 flex items-center justify-center">
+            <Image src={Logo} alt="EasyAI logo here!" width={50} height={50} />
+            <span className="text-2xl font-bold text-easycolor">
+              easy note AI
+            </span>
+          </div>
+
+          {/* <div className="mt-10 flex items-center justify-center">
+            <Image
+              src={openAIlogo1}
+              alt="EasyAI logo here!"
+              width={150}
+              height={150}
+            />
+          </div> */}
         </div>
-      </div>
+      </main>
     </>
   );
 }
