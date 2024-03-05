@@ -16,7 +16,7 @@ export default function CardComponent() {
   const [index, setIndex] = useState(0);
   const typingSpeed = 50;
   const sentence =
-    "Take note-taking to the next level with AI-powered insights and interactions. Lorem ipsum dolor sit, amet consectetur adipisicing elit. In veritatis quo accusantium voluptatibus inventore facilis tenetur, eaque placeat sunt aliquid suscipit obcaecati debitis, tempora minus. Labore nemo aliquid quae saepe! ";
+    "I'm Henry, and I'm excited to introduce you to a revolutionary note-taking platform that brings your note-taking experience to new heights through cutting-edge AI-powered insights and interactive features. 🚀 With our app, you can seamlessly capture your ideas, thoughts, and important information in a more efficient and effective way. Join me on this exciting journey of elevated note-taking experiences! ✍️";
 
   useEffect(() => {
     const typing = setInterval(() => {
