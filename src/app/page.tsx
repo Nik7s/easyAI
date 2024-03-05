@@ -24,7 +24,7 @@ export default function LandingPage() {
     <>
       <NavBarPage />
       <main className="min-w-screen m-auto flex min-h-screen max-w-7xl flex-col items-center justify-center p-4">
-        <Card className="-mt-8 mb-9 border-none p-10 shadow-none">
+        <Card className="-mt-8 mb-3 border-none p-10 shadow-none">
           <CardHeader>
             <div className="mt-5 flex flex-col items-center justify-center gap-3">
               <div className="flex flex-col items-center justify-center gap-8 text-center">
@@ -64,7 +64,7 @@ export default function LandingPage() {
           </CardHeader>
         </Card>
       </main>
-      <div className="min-w-screen m-auto flex max-w-7xl flex-col items-center justify-center p-4">
+      <div className="min-w-screen flex max-w-7xl flex-col items-center justify-center p-4">
         <div className="block items-center justify-evenly gap-4 sm:flex">
           <div className="flex items-center justify-center">
             <h2 className=" text-9xl text-easycolor">Hello!</h2>
