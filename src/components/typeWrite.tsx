@@ -49,7 +49,7 @@ const Typewriter: React.FC<{ words: string[] }> = ({ words }) => {
   }, [currentText, currentIndex, isDeleting, words]);
 
   return (
-    <h2 className="text-5xl text-easycolor sm:text-6xl md:text-7xl">
+    <h2 className="text-4xl text-easycolor sm:text-6xl md:text-7xl">
       Easy {currentText}
       <span className="cursor-blink">|</span>
     </h2>

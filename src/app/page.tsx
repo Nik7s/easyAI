@@ -39,8 +39,9 @@ export default function LandingPage() {
                 <MyComponent />
 
                 <CardDescription className="max-w-[450px] text-center">
-                  Create note, input important information to remmber, with
-                  simple prompt get information you need at time
+                  Create a note and input important information to remember.
+                  With a simple prompt, retrieve the information you need at the
+                  time.
                 </CardDescription>
               </div>
 
@@ -62,7 +63,8 @@ export default function LandingPage() {
             </div>
           </CardHeader>
         </Card>
-
+      </main>
+      <div className="min-w-screen m-auto flex min-h-screen max-w-7xl flex-col items-center justify-center p-4">
         <div className="block items-center justify-evenly gap-4 sm:flex">
           <div className="flex items-center justify-center">
             <h2 className=" text-9xl text-easycolor">Hello!</h2>
@@ -90,7 +92,7 @@ export default function LandingPage() {
             />
           </div> */}
         </div>
-      </main>
+      </div>
     </>
   );
 }
