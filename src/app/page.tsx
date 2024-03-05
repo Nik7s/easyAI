@@ -64,7 +64,7 @@ export default function LandingPage() {
           </CardHeader>
         </Card>
       </main>
-      <div className="min-w-screen m-auto flex min-h-screen max-w-7xl flex-col items-center justify-center p-4">
+      <div className="min-w-screen m-auto flex max-w-7xl flex-col items-center justify-center p-4">
         <div className="block items-center justify-evenly gap-4 sm:flex">
           <div className="flex items-center justify-center">
             <h2 className=" text-9xl text-easycolor">Hello!</h2>
