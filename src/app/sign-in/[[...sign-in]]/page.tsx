@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function SignInPage() {
   return (
-    <div className="flex h-screen items-center justify-center">
+    <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
       <SignIn
         appearance={{
           baseTheme: dark,
