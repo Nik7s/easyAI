@@ -99,10 +99,7 @@ export default function AIChatBox({ open, onClose }: AIChatBoxProps) {
           </div>
         )}
 
-        <form
-          onSubmit={handleSubmit}
-          className=" m-3 flex flex-col gap-2 sm:flex-row"
-        >
+        <form onSubmit={handleSubmit} className=" m-3 mb-6 flex gap-2">
           <Button
             className=" hidden shrink-0 items-center justify-center sm:flex"
             title="clear chat"
