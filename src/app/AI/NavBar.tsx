@@ -17,7 +17,7 @@ export default function NavBarPage() {
   const { theme } = useTheme();
   return (
     <>
-      <div className=" sticky top-0 p-4 shadow">
+      <div className=" static top-0 p-4 shadow">
         <div className="m-auto flex flex-wrap items-center justify-between gap-3">
           <Link
             href={"/notes"}
