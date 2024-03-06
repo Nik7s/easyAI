@@ -60,7 +60,7 @@ export default function AIChatBox({ open, onClose }: AIChatBoxProps) {
       {/* <button onClick={onClose} title="closeBox" className="mb-1 ms-auto block">
         <XCircle size={30} />
       </button> */}
-      <div className="flex min-h-full flex-col rounded bg-background px-5 sm:px-20 ">
+      <div className="flex min-h-full flex-col justify-between bg-background px-5 sm:px-20 ">
         <div className="h-full overflow-scroll" ref={scrollRef}>
           {messages.map((message) => (
             <ChatMessage message={message} key={message.id} />
@@ -83,7 +83,7 @@ export default function AIChatBox({ open, onClose }: AIChatBoxProps) {
           />
         )}
         {messages.length === 0 && (
-          <div className="col-span-full flex min-h-[450px] flex-col items-center justify-center gap-6 sm:min-h-[500px]">
+          <div className="col-span-full flex  flex-col items-center justify-center gap-6 ">
             {/* <Image
               src={Logo}
               alt="easyAi"
