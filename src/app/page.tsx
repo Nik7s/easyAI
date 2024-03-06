@@ -12,6 +12,7 @@ import Image from "next/image";
 import { Bot } from "lucide-react";
 import MyComponent from "@/components/typeWrite";
 import NavBarPage from "./landing/NavBar";
+import TypeWriter from "@/components/typewriter";
 
 export const metadata = {
   title: "easyAI",
@@ -32,11 +33,9 @@ export default function LandingPage() {
                 <h1 className="text-5xl sm:text-6xl md:text-6xl">
                   AI for Organizing your note
                 </h1>
-                {/* <h2 className="text-5xl text-easycolor sm:text-6xl md:text-7xl ">
-                Easy Organize <span className="cursor-blink">|</span>
-              </h2> */}
-
-                <MyComponent />
+                <h2 className="flex gap-3 text-2xl text-easycolor sm:text-6xl md:text-7xl">
+                  Easy <TypeWriter />
+                </h2>
 
                 <CardDescription className="max-w-[450px] text-center">
                   Create a note and input important information to remember.
