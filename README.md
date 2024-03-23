@@ -1,4 +1,5 @@
-﻿# Revolutionary Note-Taking App
+# easyAI 
+ # Revolutionary Note-Taking App
 
 Welcome to our revolutionary note-taking app! This app is designed to enhance your note-taking experience with cutting-edge AI-powered insights and interactive features.
 
